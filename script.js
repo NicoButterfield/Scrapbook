@@ -122,10 +122,8 @@ function cycleImage(){
       //document.getElementsByTagName('img')[0].setAttribute('src', horizontal[curImageIndex]);
       
 
-      $("#horiz").attr("src", horizontal[curHorzImageIndex]);
-      $("#vert").attr("src", vertical[curVertImageIndex]); 
-      document.getElementById("#horiz").setAttribute("src", horizontal[curHorzImageIndex]);
-      document.getElementById("#vert").setAttribute("src",  vertical[curVertImageIndex]); 
+      document.getElementById("horiz").setAttribute("src", horizontal[curHorzImageIndex]);
+      document.getElementById("vert").setAttribute("src",  vertical[curVertImageIndex]); 
 
   }
    
