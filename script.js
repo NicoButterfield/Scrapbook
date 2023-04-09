@@ -124,14 +124,9 @@ function cycleImage(){
 
       $("#horiz").attr("src", horizontal[curHorzImageIndex]);
       $("#vert").attr("src", vertical[curVertImageIndex]); 
-       
+      document.getElementById("#horiz").setAttribute("src", horizontal[curHorzImageIndex]);
+      document.getElementById("#vert").setAttribute("src",  vertical[curVertImageIndex]); 
 
   }
-
-    // addEventListener("DOMContentLoaded", (event) => {
-      
-    //  setInterval(cycleImage(), 1000);
-    // });
-
    
     startImageCycle();
