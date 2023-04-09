@@ -1,5 +1,20 @@
-
 //p5.js animation at the bottom of the page
+var horizontal = ["photos/horizontal/1.JPG",
+              "photos/horizontal/2.JPG",
+              "photos/horizontal/3.JPG",
+              "photos/horizontal/4.JPG",
+              "photos/horizontal/5.JPG",
+              "photos/horizontal/6.JPG",
+              "photos/horizontal/7.JPG"
+];
+
+var vertical = ["photos/verticle/1.JPG",
+                "photos/verticle/2.JPG",
+                "photos/verticle/3.JPG"
+];
+
+let curHorzImageIndex = 0;
+let curVertImageIndex = 0;
 let canvas;
 let mound = [];
 
@@ -14,6 +29,7 @@ function setup(){
         mound.push(new Sand());
     }
   }
+
   function windowResized()
   {
       resizeCanvas(windowWidth, windowHeight);
@@ -76,3 +92,46 @@ class Sand
       line(this.x, this.y, this.x, this.y);
     }
 }
+
+ // 0 is displayed by default
+//var intervalId; //Remember the ID of the interval so we can stop it later.
+
+function startImageCycle(){
+    // cycleImage(el); //Cycle the image now so feels responsive. Remove if not wanted.
+    intervalId = setInterval(cycleImage, 5000); //Change image every 1000ms (1s)
+}
+
+
+// function stopImageCycle(el){
+//     clearInterval(intervalId);
+// }
+
+function cycleImage(){
+
+  curHorzImageIndex++;
+  curVertImageIndex++;
+    if(curHorzImageIndex >= horizontal.length - 1) {
+      curHorzImageIndex = 0;
+    }
+
+    if(curVertImageIndex >= vertical.length - 1) {
+      curVertImageIndex = 0;
+    }
+      // console.log(document.getElementsByTagName('img')[0].id);
+      
+      //document.getElementsByTagName('img')[0].setAttribute('src', horizontal[curImageIndex]);
+      
+
+      $("#horiz").attr("src", horizontal[curHorzImageIndex]);
+      $("#vert").attr("src", vertical[curVertImageIndex]); 
+       
+
+  }
+
+    // addEventListener("DOMContentLoaded", (event) => {
+      
+    //  setInterval(cycleImage(), 1000);
+    // });
+
+   
+    startImageCycle();

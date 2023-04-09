@@ -2,11 +2,81 @@ body
 {
     min-height: 96vh;
     background-color: #ABCACE;
-    border: .5vh solid white;  
-    box-shadow:white;
+    border: .5vh solid rgba(255, 255, 255, .8);
+    box-shadow:white 1px 1px 1px;
     border-radius: 1vh;
     align-content: center;
 }
+
+header
+{
+    font-family: Merienda;
+    color:  rgba(255, 255, 255, .8);
+    font-size: 5vh;
+    text-align: center;
+    text-shadow:  rgba(255, 255, 255) 1px 1px 1px;
+}
+
+.photoContainer
+{
+    opacity: .95;
+    display: flex;
+    /* height: vh92;
+    width: vw92; */
+}
+
+.horizontal
+{
+    padding-top: 2vh;
+    padding-left: 2vw;
+    justify-content: center;
+}
+.horizontal img
+{
+    opacity: .95;
+    margin:1vh;
+    margin-right:.5vw;
+    margin-left:.5vw;
+
+    height: 80vh;
+    width: 60vw;
+    float: left;
+    justify-content: center;
+
+    border: .5vh solid rgba(255, 255, 255, .8);
+    border-radius: 1vh;
+    box-shadow:rgba(0, 0, 0, .8) 0px 7px 5px;
+
+    /* background-image: url("photos/horizontal/flower.JPG");*/
+    
+    transition: 1s;
+    background:  #ABCACE;
+
+}
+
+.verticle
+{ 
+    padding-left: 2vw;
+    padding-right: 1vw;
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.verticle img
+{
+    opacity: .95;
+    float: right;
+    height: 80vh;
+    width: 30vw;
+    border-radius: 1vh;
+    border: .5vh solid rgba(255, 255, 255, .8);
+
+    box-shadow:rgba(0, 0, 0, .8) 0px 7px 5px;
+    transition: 1s;
+     background:  #ABCACE;
+}
+
 
 
 
